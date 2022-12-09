@@ -10,27 +10,6 @@ int main()
     Sleep(1000); // Sleep 1,0s
     preencherVetor(y, TAM);
 
-    /*// Verificando as coocorrências
-    int lin;
-    for(lin=0; lin<N; lin++)
-    {
-    	int col;
-        for(col=0; col<N; col++)
-        {
-            int cont = 0; // conta o numero de coocorrências
-			int k;
-            for(k=0; k<TAM; k++)
-            {
-                if(x[k] == lin && y[k] == col)
-                {
-                    ++cont;
-                }
-            }
-
-            m[lin][col] = cont;
-        }
-    }*/
-    
     matrizCoocorrencias(x, y, TAM, m, N);
 
     printf("X = [ ");
