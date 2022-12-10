@@ -36,14 +36,14 @@ void imprimirMatriz(int *pm, int dim)
 
 void matrizCoocorrencias(int *px, int *py, int qtd, int *pm, int dim)
 {
-	// Verificando as coocorrências
+	// Verificando as coocorrÃªncias
     int lin;
     for(lin=0; lin<dim; lin++)
     {
     	int col;
         for(col=0; col<dim; col++)
         {
-            int cont = 0; // conta o numero de coocorrências
+            int cont = 0; // conta o numero de coocorrÃªncias
 			int k;
             for(k=0; k<qtd; k++)
             {
@@ -54,6 +54,18 @@ void matrizCoocorrencias(int *px, int *py, int qtd, int *pm, int dim)
             }
 
             *(pm + dim * lin + col) = cont;
+        }
+    }
+}
+
+void vetorizacao(int *pv, int *pm, int qnl, int qnc)
+{
+	int k;
+    for(k=0; k<qnl; k++){
+    	int j;
+        for(j=0; j<qnc; j++)
+        {
+            *(pv + qnc * k + j) = *(pm + qnc * k + j);
         }
     }
 }
