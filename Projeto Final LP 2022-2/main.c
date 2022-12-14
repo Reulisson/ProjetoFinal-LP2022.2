@@ -7,9 +7,9 @@
 /******************************************************************************************************/
 
 
-#include "pgm.c"
-#include "util.c"
-#include "quantizar.c"
+#include "pgm.h"
+#include "util.h"
+#include "quantizar.h"
 
 
 int main(int argc, char *argv[]){
